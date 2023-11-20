@@ -6,8 +6,13 @@
     <title>Music Player </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500&family=Kanit&family=Lato:wght@300&family=Nunito&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 </head>
 <body>
+    
 
 <img src="images/thumb-msc/betternow-pic.jpg" id="m-betternow">
 <div class="descricao">
@@ -17,7 +22,7 @@
 
 <div class="duracao">
     <div class="barra">
-    <progress value="0.9" max="1"></progress>
+    <progress value="0" max="1"></progress>
     <div class="ponto"></div>
     </div>
     <div class="tempo">
@@ -26,11 +31,12 @@
     </div>
 </div>
 <div class="player">
-    <span class="material-symbols-outlined">skip_previous</span>
-    <span class="material-symbols-outlined">play_circle</span>
-   <span class="material-symbols-outlined">pause_circle</span>
-   <span class="material-symbols-outlined">skip_next</span>
+    <span class="material-symbols-outlined" id="previous">skip_previous</span>
+    <span class="material-symbols-outlined" id="play">play_circle</span>
+   <span class="material-symbols-outlined" id="pause">pause_circle</span>
+   <span class="material-symbols-outlined" id="next">skip_next</span>
 </div>
 <audio src="musicas/Akon - Lonely (Official Music Video)_6EEW-9NDM5k.mp3"></audio>
+
 </body>
 </html>
