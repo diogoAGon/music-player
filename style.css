@@ -52,7 +52,7 @@ h2{
 /* player vai funcionar de acordo com isso daqui */
 progress{
     height: 6px;
-    width: 50%;
+    width: 0%;
     background-color: #010916;
 }
 /* fazendo um quadrado transformando em circulo, q vai ser o "direcionador" */
@@ -61,7 +61,7 @@ progress{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    margin-left: -2px;
+    margin-left: -10px;
 }
 
 .tempo{
