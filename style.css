@@ -14,7 +14,12 @@ body, html {
 
 }
 
-
+.box{
+    background: linear-gradient(270deg, #010916, rgb(4, 17, 37), #010916);
+    width: 100%;
+    padding: 25px;
+    padding-top: 35px;
+}  
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,

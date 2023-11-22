@@ -1,8 +1,8 @@
 
 let musicas = [
     {titulo:'Lonely', Artista:'Akon', src:'musicas/Akon - Lonely (Official Music Video)_6EEW-9NDM5k.mp3', img:'images/thumb-msc/lonely-pic.jpg'},
-    {titulo:'Congratulations', Artista:'Post Malone', src:'musicas/better now.mp3', img:'images/thumb-msc/betternow-pic.jpg'},
-    {titulo:'Better Now', Artista:'Post Malone', src:'musicas/Post Malone - White Iverson_SLsTskih7_I.mp3', img:'images/thumb-msc/Congratulations-PIC.jpg'}
+    {titulo:'Better Now', Artista:'Post Malone', src:'musicas/better now.mp3', img:'images/thumb-msc/betternow-pic.jpg'},
+    {titulo:'White Iverson', Artista:'Post Malone', src:'musicas/Post Malone - White Iverson_SLsTskih7_I.mp3', img:'images/thumb-msc/Congratulations-PIC.jpg'}
 ]
 
 
@@ -19,15 +19,26 @@ let anterior = document.querySelector('#previous')
 let proximo = document.querySelector('#next')
 let indexMusica = 0;
 
+renderizarMusica(indexMusica);
+
 duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration))
 // utilizando funcao anonima
 anterior.addEventListener('click', () => {
     indexMusica--;
+    if(indexMusica < 0) {
+        indexMusica = 2;
+    }
  renderizarMusica(indexMusica);
+ pausarMusica(indexMusica);
 });
 proximo.addEventListener('click', () => {
     indexMusica++;
+    if (indexMusica > 2){
+        indexMusica = 0;
+    }
+    
  renderizarMusica(indexMusica);
+ pausarMusica(indexMusica);
 });
 musica.addEventListener('timeupdate', atualizarBarra)
 playM.addEventListener('click', tocarMusica);
@@ -39,6 +50,10 @@ musica.addEventListener('loadeddata', () => {
  nomeMusica.textContent = musicas[index].titulo
  nomeArtista.textContent = musicas[index].Artista
  imagem.src = musicas[index].img;
+
+
+
+
  duracaoMusica.textContent = segundosParaMinutos(Math.floor(musica.duration))
 });
 }
