@@ -10,16 +10,23 @@ body, html {
     height: 100%;
     color: #ffffff;
     font-family: 'Nunito', sans-serif;
-    background-color: #010916;
+    background-color: #010711;
 
 }
 
 .box{
-    background: linear-gradient(270deg, #010916, rgb(4, 17, 37), #010916);
-    width: 100%;
-    padding: 25px;
-    padding-top: 35px;
+    padding: 55px;
+    background-image: linear-gradient(400deg,#010711, #010a1adc , #010711, #010a1ad5, #010711);
+   
 }  
+@keyframes box-animado{
+0%{
+    background-position-x: 0%;
+}
+100%{
+    background-position-x: 100%;
+}
+}
 .material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
@@ -42,6 +49,7 @@ h2{
 .duracao{
     width: 300px;
     margin-top: 25px;
+    
 }
 .barra{
     width: 300px;
@@ -52,6 +60,7 @@ h2{
     align-items: center;
     /* comando p empurrar p esquerda */
     justify-content: flex-start;
+    
 }
 
 /* player vai funcionar de acordo com isso daqui */
@@ -60,11 +69,14 @@ progress{
     width: 0%;
     background-color: #010916;
 }
+
+
+
 /* fazendo um quadrado transformando em circulo, q vai ser o "direcionador" */
 .ponto{
     background-color: #eee;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     margin-left: -10px;
 }
